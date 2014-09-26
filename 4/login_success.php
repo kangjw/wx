@@ -1,0 +1,1 @@
+<?phpsession_start();//echo $_SESSION['name'];if(!isset($_SESSION['name'])){	header("location:main_login.php");}else{	header("location:dp.php");}?>

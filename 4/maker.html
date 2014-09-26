@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body, 
+html,
+div#container{width:800px}
+div#header {background-color:#99bbbb;}
+div#menu {height:400px; width:100px; float:left; }
+div#allmap {height:400px; width:700px; float:left; }
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=EA61ea9e02e404588d4bf46970ddcfd9"></script>
+<title>Hello, World</title>
+</head>
+<script type="text/javascript">
+var mapx=116.404;
+var mapy=39.925;
+</script>
+
+<body>
+<div id="container">
+<div id="header"> <h1>This is a test APP1!</h1></div>
+<div id="menu"> <a href="http://www.w3school.com.cn/">Visit W3School</a></div>
+<div id="allmap"></div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+var map = new BMap.Map("allmap");            // ԴݨMapʵ}
+var point = new BMap.Point(mapx,mapy);    // Դݨ֣ظҪ
+map.centerAndZoom(point,15);                     // Եʼۯ֘ͼ,ʨ׃אф֣ظҪۍ֘ͼܶҰc
+map.enableScrollWheelZoom();   
+var marker = new BMap.Marker(point);                           //ǴԃڶÖ؅ճ̵С
+map.addOverlay(marker);
+var mycircle = new BMap.Circle(point,1000);
+mycircle.setFillColor(0xFF00FF);
+mycircle.setFillOpacity(0.2);
+map.addOverlay(mycircle);
+</script>
