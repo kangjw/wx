@@ -1,0 +1,5 @@
+<?php
+$RHEA_IMGROOT='/tmp/rhea';
+#$RHEA_IMGPATH=$RHEA_IMGROOT.'/'."20140327";
+$RHEA_IMGPATH=$RHEA_IMGROOT.'/'.date("Ymd");
+?>
